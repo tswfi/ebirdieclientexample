@@ -1,0 +1,17 @@
+{
+    "name": "tswfi/ebirdieclientexample",
+    "description": "Simple example on how to use the ebirdieclient library",
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Tatu Wikman",
+            "email": "tatu.wikman@gmail.com"
+        }
+    ],
+    "require": {
+        "tswfi/ebirdieclient": "*",
+        "vlucas/phpdotenv": "5.3.x-dev"
+    }
+}
