@@ -1,6 +1,6 @@
 <?php
 /**
- * Example for fetching clubs from eBirdie
+ * Example for finding person with name and birthday
  */
 require "vendor/autoload.php";
 
@@ -11,16 +11,15 @@ $dotenv->load();
 # init the client
 $client = new tswfi\Ebirdie\Client($_ENV['EBIRDIE_WSDL'], $_ENV['EBIRDIE_LOGIN'], $_ENV['EBIRDIE_PASS']);
 
-# fetch all clubs and print them out
+# find person with personid
+
+$person = new stdClass();
+$person->personId = $_ENV['TESTPERSON_PERSONID'];
+
 try {
-    $clubs = $client->__soapCall('fetchAllClubs', []);
-
-    foreach ($clubs->return as $club) {
-        if ($club->city == 'Lempäälä') {
-            print_r($club);
-        }
-    }
-
+    $personResponse = $client->findPersonByPersonId($person);
+    $person = $personResponse->return;
+    print_r($person);
 } catch (SoapFault $e) {
     print("Error: " . $e->getMessage());
 }
