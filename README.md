@@ -26,7 +26,7 @@ Check the different example scripts and run them to see what happens.
 
 ## Club membership service
 * [clubmembershipservice_findClubMembershipsByClubId.php](clubmembershipservice_findClubMembershipsByClubId.php) - Get all memberships for one club
-* [clubmembershipservice_addClubMembership.php](clubmembershipservice_addClubMembership.php) - TODO
+* [clubmembershipservice_addClubMembership.php](clubmembershipservice_addClubMembership.php) - Add membership to club, requires extra permissions
 * [clubmembershipservice_updateClubMembership.php](clubmembershipservice_updateClubMembership.php) - TODO
 * [clubmembershipservice_removeClubMember.php](clubmembershipservice_removeClubMember.php) - TODO
 
