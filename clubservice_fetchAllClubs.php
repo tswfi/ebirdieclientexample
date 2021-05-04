@@ -14,6 +14,8 @@ $client = new tswfi\Ebirdie\Client($_ENV['EBIRDIE_WSDL'], $_ENV['EBIRDIE_LOGIN']
 # fetch all clubs and print them out
 $clubs = $client->__soapCall('fetchAllClubs', []);
 
-foreach ($clubs as $club) {
-    print_r($club);
+foreach ($clubs->return as $club) {
+    if ($club->city == 'Turku') {
+        print_r($club);
+    }
 }
