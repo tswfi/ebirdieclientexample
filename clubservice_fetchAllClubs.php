@@ -10,18 +10,22 @@ $dotenv->load();
 
 # init the client
 $client = new tswfi\Ebirdie\Client($_ENV['EBIRDIE_WSDL'], $_ENV['EBIRDIE_LOGIN'], $_ENV['EBIRDIE_PASS']);
+$client->__setLocation("https://api.golf.fi/soap/ClubService");
 
 # fetch all clubs and print them out
 try {
     $clubs = $client->__soapCall('fetchAllClubs', []);
 
     foreach ($clubs->return as $club) {
-        if ($club->city == 'Lempäälä') {
+        if ($club->city == 'Turku') {
             print_r($club);
         }
     }
-
 } catch (SoapFault $e) {
     print("Error: " . $e->getMessage());
+    print("Request headers: " . $client->__getLastRequestHeaders());
+    print("Request: " . $client->__getLastRequest());
+    print("Response headers: " . $client->__getLastResponseHeaders());
+    print("Response: " . $client->__getLastResponse());
 }
 

@@ -389,12 +389,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tswfi/ebirdieclient.git",
-                "reference": "3c03cd9998212966b4de6d6cad43913403c59477"
+                "reference": "7fc572670f1ffbe8d4335ac42aab70e7fc3dc807"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tswfi/ebirdieclient/zipball/3c03cd9998212966b4de6d6cad43913403c59477",
-                "reference": "3c03cd9998212966b4de6d6cad43913403c59477",
+                "url": "https://api.github.com/repos/tswfi/ebirdieclient/zipball/7fc572670f1ffbe8d4335ac42aab70e7fc3dc807",
+                "reference": "7fc572670f1ffbe8d4335ac42aab70e7fc3dc807",
                 "shasum": ""
             },
             "require": {
@@ -429,9 +429,9 @@
             ],
             "support": {
                 "issues": "https://github.com/tswfi/ebirdieclient/issues",
-                "source": "https://github.com/tswfi/ebirdieclient/tree/main"
+                "source": "https://github.com/tswfi/ebirdieclient/tree/v0.0.2"
             },
-            "time": "2021-04-29T14:47:01+00:00"
+            "time": "2021-05-07T11:11:45+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
