@@ -10,7 +10,6 @@ $dotenv->load();
 
 # init the client
 $client = new tswfi\Ebirdie\Client($_ENV['EBIRDIE_WSDL'], $_ENV['EBIRDIE_LOGIN'], $_ENV['EBIRDIE_PASS']);
-$client->__setLocation("https://api.golf.fi/soap/ClubService");
 
 # fetch all clubs and print them out
 try {
